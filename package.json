@@ -1,0 +1,21 @@
+{
+  "name": "wallaby-mocha-ts-testdouble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node18-strictest-esm": "^1.0.1",
+    "@types/lodash": "^4.14.191",
+    "@types/mocha": "^10.0.1",
+    "mocha": "^10.2.0",
+    "testdouble": "^3.16.8",
+    "ts-node": "^10.9.1",
+    "tsx": "^3.12.2"
+  }
+}
