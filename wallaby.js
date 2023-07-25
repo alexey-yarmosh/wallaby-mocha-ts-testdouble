@@ -12,6 +12,12 @@ export default function (wallaby) {
     tests: [
       'tests/**/*.ts'
     ],
+
+    setup: function(w) {
+        const path = require('path');
+        w.testFramework.addFile(path.resolve(process.cwd(), 'tests/setup.js'));
+    },
+
     env: {
       type: 'node',
       // Tell Wallaby to run your tests with testdouble loader

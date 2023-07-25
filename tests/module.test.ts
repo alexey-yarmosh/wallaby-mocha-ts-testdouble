@@ -1,5 +1,6 @@
 import assert from 'node:assert';
 import * as td from 'testdouble';
+import { expect } from 'chai';
 
 describe('test', () => {
   let module: any = null;
@@ -18,6 +19,9 @@ describe('test', () => {
   it('should mock src modules', () => {
     const result = module.default();
     assert.equal(result, 4);
+    expect({ a: 2 }).to.matchPattern(`{
+      "a": Number AND range(0, 5),
+    }`);
   });
 
   it('should mock npm modules', () => {
